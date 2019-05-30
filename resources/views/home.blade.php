@@ -2,13 +2,11 @@
 
 @section('content')
 <div class="container">
-    <label>Total: {{ $total->pluck('total') }}</label>
+    <label>Total: {{ $total->pluck('total')->implode(', ') }} bs.</label>
     <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-default1">
       + nueva caja
     </button>
-    <button type="button" class="btn btn-warning pull-right" data-toggle="modal" data-target="#modal-default">
-      + entrada
-    </button><br> <br>
+    <br> <br>
     <div class="row">
       @foreach($boxes as $box)
       <div class="col-md-6">

@@ -33,7 +33,9 @@
 		    			<strong><i class="fa fa-money margin-r-5"></i> {{ $gasto->ammount }} bs. | {{ $gasto->type }}</strong>
 		    			<p>{{ $gasto->description }}</p>
 		    			<span class="text-muted"> {{ $gasto->created_at->diffForHumans() }} </span>
-		    			<hr>
+              @unless($loop->last)
+		    			 <hr>
+              @endunless
 	    			@endforeach
 	    			</div>
 	    		</div>
@@ -46,7 +48,9 @@
 		    			<strong><i class="fa fa-money margin-r-5"></i> {{ $gasto->ammount }} bs.</strong>
 		    			<p>{{ $gasto->description }}</p>
 		    			<span class="text-muted"> {{ $gasto->created_at->diffForHumans() }} </span>
-		    			<hr>
+		    			  @unless($loop->last)
+                 <hr>
+                @endunless
 		    			@endif
 	    			@endforeach
 	    			</div>
@@ -60,7 +64,9 @@
 		    			<strong><i class="fa fa-money margin-r-5"></i> {{ $gasto->ammount }} bs. </strong>
 		    			<p>{{ $gasto->description }}</p>
 		    			<span class="text-muted"> {{ $gasto->created_at->diffForHumans() }} </span>
-		    			<hr>
+		    			  @unless($loop->last)
+                 <hr>
+                @endunless
 		    			@endif
 	    			@endforeach
 	    			</div>
